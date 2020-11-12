@@ -7,17 +7,18 @@ PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
 
 :personShape IRI {
   a [obo:NCBITaxon_9606];
-  sio:SIO_000228 @:personRoleShape;
+  sio:SIO_000228 @:personRoleShape+;
+  sio:SIO_000217 @:birthDateQualityShape OR @:genderQualityShape;
   sio:SIO_000217 @:birthDateQualityShape OR @:genderQualityShape
 }
 
 :personRoleShape IRI {
   a [obo:OBI_0000093];
-  sio:SIO_000356 @:birthDateProcessShape OR @:genderProcessShape
+  sio:SIO_000356 @:processShape+
 }
 
-:birthDateProcessShape IRI {
-  sio:SIO_000229 @:birthDateOutputShape
+:processShape IRI {
+  sio:SIO_000229 @:birthDateOutputShape OR @:genderOutputShape
 }
 
 :birthDateQualityShape IRI {
@@ -34,10 +35,6 @@ PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
 :genderQualityShape IRI {
   a [obo:NCIT_C17357];
   sio:SIO_000642 @:genderOutputShape
-}
-
-:genderProcessShape IRI {
-  sio:SIO_000229 @:genderOutputShape
 }
 
 :genderOutputShape IRI {
