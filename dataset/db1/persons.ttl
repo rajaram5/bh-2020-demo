@@ -1,0 +1,101 @@
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/db1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
+
+:person_1 a sio:SIO_000498 ;
+  sio:SIO_000228 :person_1_role_1 ;
+  sio:SIO_000217 :person_1_quality_1 ;  
+  sio:SIO_000228 :person_1_role_2 ;
+  sio:SIO_000217 :person_1_quality_2 .
+
+:person_1_quality_1 a obo:NCIT_C68615 ;
+  sio:SIO_000642  :person_1_output_1 .
+
+:person_1_role_1 a obo:OBI_0000093 ;
+  sio:SIO_000356 :person_1_process_1 .
+
+:person_1_process_1 a sio:SIO_000006 ;
+  sio:SIO_000229 :person_1_output_1 .
+
+:person_1_output_1 a sio:SIO_000340 ;
+  sio:SIO_000300 "2020-02-31T12:00:00"^^xsd:dateTime .
+  
+
+:person_1_role_2 a obo:OBI_0000093 ;
+  sio:SIO_000356 :person_1_process_2 .
+
+:person_1_quality_2 a obo:NCIT_C17357 ;
+  sio:SIO_000642 :person_1_output_2 .
+
+:person_1_process_2 a sio:SIO_000006 ;
+  sio:SIO_000229 :person_1_output_2 .
+
+:person_1_output_2 a sio:SIO_000340, snomedct:703118005 .
+
+
+
+
+:person_2 a sio:SIO_000498 ;
+  sio:SIO_000228 :person_2_role_1 ;
+  sio:SIO_000217 :person_2_quality_1 ;  
+  sio:SIO_000228 :person_2_role_2 ;
+  sio:SIO_000217 :person_2_quality_2 .
+
+:person_2_quality_1 a obo:NCIT_C68615 ;
+  sio:SIO_000642  :person_2_output_1 .
+
+:person_2_role_1 a obo:OBI_0000093 ;
+  sio:SIO_000356 :person_2_process_1 .
+
+:person_2_process_1 a sio:SIO_000006 ;
+  sio:SIO_000229 :person_2_output_1 .
+
+:person_2_output_1 a sio:SIO_000340 ;
+  sio:SIO_000300 "2010-03-01T12:00:00"^^xsd:dateTime .
+  
+
+:person_2_role_2 a obo:OBI_0000093 ;
+  sio:SIO_000356 :person_2_process_2 .
+
+:person_2_quality_2 a obo:NCIT_C17357 ;
+  sio:SIO_000642 :person_2_output_2 .
+
+:person_2_process_2 a sio:SIO_000006 ;
+  sio:SIO_000229 :person_2_output_2 .
+
+:person_2_output_2 a sio:SIO_000340, snomedct:394743007 .
+
+
+
+
+:person_3 a sio:SIO_000498 ;
+  sio:SIO_000228 :person_3_role_1 ;
+  sio:SIO_000217 :person_3_quality_1 ;  
+  sio:SIO_000228 :person_3_role_2 ;
+  sio:SIO_000217 :person_3_quality_2 .
+
+:person_3_quality_1 a obo:NCIT_C68615 ;
+  sio:SIO_000642  :person_3_output_1 .
+
+:person_3_role_1 a obo:OBI_0000093 ;
+  sio:SIO_000356 :person_3_process_1 .
+
+:person_3_process_1 a sio:SIO_000006 ;
+  sio:SIO_000229 :person_3_output_1 .
+
+:person_3_output_1 a sio:SIO_000340 ;
+  sio:SIO_000300 "2015-12-06T12:00:00"^^xsd:dateTime .
+  
+
+:person_3_role_2 a obo:OBI_0000093 ;
+  sio:SIO_000356 :person_3_process_2 .
+
+:person_3_quality_2 a obo:NCIT_C17357 ;
+  sio:SIO_000642 :person_3_output_2 .
+
+:person_3_process_2 a sio:SIO_000006 ;
+  sio:SIO_000229 :person_3_output_2 .
+
+:person_3_output_2 a sio:SIO_000340, snomedct:703118005 .
