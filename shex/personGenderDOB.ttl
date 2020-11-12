@@ -1,0 +1,255 @@
+@prefix :      <http://purl.org/ejp-rd/cde/v020/shex/> .
+@prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio:   <http://semanticscience.org/resource/> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+
+:birthDateQualityShape
+        a       <http://shex.io/ns/shex#ShapeAnd> ;
+        <http://shex.io/ns/shex#expressions>
+                ( [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                    <http://shex.io/ns/shex#nodeKind>
+                            <http://shex.io/ns/shex#iri>
+                  ]
+                  [ a       <http://shex.io/ns/shex#Shape> ;
+                    <http://shex.io/ns/shex#closed>
+                            false ;
+                    <http://shex.io/ns/shex#expression>
+                            [ a       <http://shex.io/ns/shex#EachOf> ;
+                              <http://shex.io/ns/shex#expressions>
+                                      ( [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                                                    <http://shex.io/ns/shex#values>
+                                                            ( obo:NCIT_C68615 )
+                                                  ]
+                                        ]
+                                        [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  sio:SIO_000642 ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  :birthDateOutputShape
+                                        ]
+                                      )
+                            ]
+                  ]
+                ) .
+
+:birthDateOutputShape
+        a       <http://shex.io/ns/shex#ShapeAnd> ;
+        <http://shex.io/ns/shex#expressions>
+                ( [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                    <http://shex.io/ns/shex#nodeKind>
+                            <http://shex.io/ns/shex#iri>
+                  ]
+                  [ a       <http://shex.io/ns/shex#Shape> ;
+                    <http://shex.io/ns/shex#closed>
+                            false ;
+                    <http://shex.io/ns/shex#expression>
+                            [ a       <http://shex.io/ns/shex#EachOf> ;
+                              <http://shex.io/ns/shex#expressions>
+                                      ( [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                                                    <http://shex.io/ns/shex#values>
+                                                            ( sio:SIO_000340 )
+                                                  ]
+                                        ]
+                                        [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  sio:SIO_000300 ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                                                    <http://shex.io/ns/shex#datatype>
+                                                            xsd:dateTime
+                                                  ]
+                                        ]
+                                      )
+                            ]
+                  ]
+                ) .
+
+:personRoleShape  a  <http://shex.io/ns/shex#ShapeAnd> ;
+        <http://shex.io/ns/shex#expressions>
+                ( [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                    <http://shex.io/ns/shex#nodeKind>
+                            <http://shex.io/ns/shex#iri>
+                  ]
+                  [ a       <http://shex.io/ns/shex#Shape> ;
+                    <http://shex.io/ns/shex#closed>
+                            false ;
+                    <http://shex.io/ns/shex#expression>
+                            [ a       <http://shex.io/ns/shex#EachOf> ;
+                              <http://shex.io/ns/shex#expressions>
+                                      ( [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                                                    <http://shex.io/ns/shex#values>
+                                                            ( obo:OBI_0000093 )
+                                                  ]
+                                        ]
+                                        [ a                             <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#max>  <http://shex.io/ns/shex#INF> ;
+                                          <http://shex.io/ns/shex#min>  1 ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  sio:SIO_000356 ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  :processShape
+                                        ]
+                                      )
+                            ]
+                  ]
+                ) .
+
+:processShape  a  <http://shex.io/ns/shex#ShapeAnd> ;
+        <http://shex.io/ns/shex#expressions>
+                ( [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                    <http://shex.io/ns/shex#nodeKind>
+                            <http://shex.io/ns/shex#iri>
+                  ]
+                  [ a       <http://shex.io/ns/shex#Shape> ;
+                    <http://shex.io/ns/shex#closed>
+                            false ;
+                    <http://shex.io/ns/shex#expression>
+                            [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                              <http://shex.io/ns/shex#predicate>
+                                      sio:SIO_000229 ;
+                              <http://shex.io/ns/shex#valueExpr>
+                                      [ a       <http://shex.io/ns/shex#ShapeOr> ;
+                                        <http://shex.io/ns/shex#expressions>
+                                                ( :birthDateOutputShape :genderOutputShape )
+                                      ]
+                            ]
+                  ]
+                ) .
+
+:genderQualityShape  a  <http://shex.io/ns/shex#ShapeAnd> ;
+        <http://shex.io/ns/shex#expressions>
+                ( [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                    <http://shex.io/ns/shex#nodeKind>
+                            <http://shex.io/ns/shex#iri>
+                  ]
+                  [ a       <http://shex.io/ns/shex#Shape> ;
+                    <http://shex.io/ns/shex#closed>
+                            false ;
+                    <http://shex.io/ns/shex#expression>
+                            [ a       <http://shex.io/ns/shex#EachOf> ;
+                              <http://shex.io/ns/shex#expressions>
+                                      ( [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                                                    <http://shex.io/ns/shex#values>
+                                                            ( obo:NCIT_C17357 )
+                                                  ]
+                                        ]
+                                        [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  sio:SIO_000642 ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  :genderOutputShape
+                                        ]
+                                      )
+                            ]
+                  ]
+                ) .
+
+:personShape  a  <http://shex.io/ns/shex#ShapeAnd> ;
+        <http://shex.io/ns/shex#expressions>
+                ( [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                    <http://shex.io/ns/shex#nodeKind>
+                            <http://shex.io/ns/shex#iri>
+                  ]
+                  [ a       <http://shex.io/ns/shex#Shape> ;
+                    <http://shex.io/ns/shex#closed>
+                            false ;
+                    <http://shex.io/ns/shex#expression>
+                            [ a       <http://shex.io/ns/shex#EachOf> ;
+                              <http://shex.io/ns/shex#expressions>
+                                      ( [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                                                    <http://shex.io/ns/shex#values>
+                                                            ( obo:NCBITaxon_9606 )
+                                                  ]
+                                        ]
+                                        [ a                             <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#max>  <http://shex.io/ns/shex#INF> ;
+                                          <http://shex.io/ns/shex#min>  1 ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  sio:SIO_000228 ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  :personRoleShape
+                                        ]
+                                        [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  sio:SIO_000217 ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#ShapeOr> ;
+                                                    <http://shex.io/ns/shex#expressions>
+                                                            ( :birthDateQualityShape :genderQualityShape )
+                                                  ]
+                                        ]
+                                        [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  sio:SIO_000217 ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#ShapeOr> ;
+                                                    <http://shex.io/ns/shex#expressions>
+                                                            ( :birthDateQualityShape :genderQualityShape )
+                                                  ]
+                                        ]
+                                      )
+                            ]
+                  ]
+                ) .
+
+:genderOutputShape  a  <http://shex.io/ns/shex#ShapeAnd> ;
+        <http://shex.io/ns/shex#expressions>
+                ( [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                    <http://shex.io/ns/shex#nodeKind>
+                            <http://shex.io/ns/shex#iri>
+                  ]
+                  [ a       <http://shex.io/ns/shex#Shape> ;
+                    <http://shex.io/ns/shex#closed>
+                            false ;
+                    <http://shex.io/ns/shex#expression>
+                            [ a       <http://shex.io/ns/shex#EachOf> ;
+                              <http://shex.io/ns/shex#expressions>
+                                      ( [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                                                    <http://shex.io/ns/shex#values>
+                                                            ( sio:SIO_000340 )
+                                                  ]
+                                        ]
+                                        [ a       <http://shex.io/ns/shex#TripleConstraint> ;
+                                          <http://shex.io/ns/shex#predicate>
+                                                  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+                                          <http://shex.io/ns/shex#valueExpr>
+                                                  [ a       <http://shex.io/ns/shex#NodeConstraint> ;
+                                                    <http://shex.io/ns/shex#values>
+                                                            ( snomedct:703118005 snomedct:394743007 snomedct:394744001 snomedct:703117000 )
+                                                  ]
+                                        ]
+                                      )
+                            ]
+                  ]
+                ) .
+
+[ a       <http://shex.io/ns/shex#Schema> ;
+  <http://shex.io/ns/shex#shapes>
+          :personShape , :personRoleShape , :processShape , :birthDateQualityShape , :birthDateOutputShape , :genderQualityShape , :genderOutputShape
+] .
+
